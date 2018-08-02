@@ -1,0 +1,29 @@
+#ifndef BACKEND_H
+#define BACKEND_H
+
+#include <QObject>
+
+class Backend : public QObject
+{
+    Q_OBJECT
+public:
+    explicit Backend(QObject *parent = 0);
+private:
+    bool running;
+    bool isTotalFileEqualZero;
+    QList<QString> files;
+    int totalFolders;
+    void readInfo();
+signals:
+    void sendStringToGui(QString);
+    void sendResultToTable(QString);
+    void changeProcessBar(int);
+    void setProgressRange(int);
+public slots:
+    void run(QString);
+    void stop();
+    void getAllFile(QString);
+    void resetAll();
+};
+
+#endif // BACKEND_H
