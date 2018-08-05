@@ -19,9 +19,10 @@ signals:
     void sendResultToTable(QString);
     void changeProcessBar(int);
     void setProgressRange(int);
+    void showFinishDialog();
+    void setStatus(QString);
 public slots:
     void run(QString);
-    void stop();
     void getAllFile(QString);
     void resetAll();
 };

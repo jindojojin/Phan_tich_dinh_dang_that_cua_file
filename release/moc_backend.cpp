@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'backend.h'
 **
-** Created: Thu Aug 2 15:57:37 2018
+** Created: Sun Aug 5 10:52:31 2018
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.4.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_Backend[] = {
        1,       // revision
        0,       // classname
        0,    0, // classinfo
-       8,   10, // methods
+       9,   10, // methods
        0,    0, // properties
        0,    0, // enums/sets
 
@@ -32,12 +32,13 @@ static const uint qt_meta_data_Backend[] = {
       34,    8,    8,    8, 0x05,
       61,    8,    8,    8, 0x05,
       83,    8,    8,    8, 0x05,
+     105,    8,    8,    8, 0x05,
+     124,    8,    8,    8, 0x05,
 
  // slots: signature, parameters, type, tag, flags
-     105,    8,    8,    8, 0x0a,
-     118,    8,    8,    8, 0x0a,
-     125,    8,    8,    8, 0x0a,
-     145,    8,    8,    8, 0x0a,
+     143,    8,    8,    8, 0x0a,
+     156,    8,    8,    8, 0x0a,
+     176,    8,    8,    8, 0x0a,
 
        0        // eod
 };
@@ -46,7 +47,8 @@ static const char qt_meta_stringdata_Backend[] = {
     "Backend\0\0sendStringToGui(QString)\0"
     "sendResultToTable(QString)\0"
     "changeProcessBar(int)\0setProgressRange(int)\0"
-    "run(QString)\0stop()\0getAllFile(QString)\0"
+    "showFinishDialog()\0setStatus(QString)\0"
+    "run(QString)\0getAllFile(QString)\0"
     "resetAll()\0"
 };
 
@@ -79,12 +81,13 @@ int Backend::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: sendResultToTable((*reinterpret_cast< QString(*)>(_a[1]))); break;
         case 2: changeProcessBar((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 3: setProgressRange((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: run((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 5: stop(); break;
-        case 6: getAllFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 7: resetAll(); break;
+        case 4: showFinishDialog(); break;
+        case 5: setStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 6: run((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 7: getAllFile((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 8: resetAll(); break;
         }
-        _id -= 8;
+        _id -= 9;
     }
     return _id;
 }
@@ -115,5 +118,18 @@ void Backend::setProgressRange(int _t1)
 {
     void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void Backend::showFinishDialog()
+{
+    QMetaObject::activate(this, &staticMetaObject, 4, 0);
+}
+
+// SIGNAL 5
+void Backend::setStatus(QString _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 5, _a);
 }
 QT_END_MOC_NAMESPACE

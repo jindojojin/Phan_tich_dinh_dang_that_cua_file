@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Thu Aug 2 16:20:13 2018
+** Created: Sun Aug 5 10:21:01 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -39,9 +39,9 @@ public:
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
     QLabel *label;
-    QPushButton *pushButton;
+    QPushButton *chose_folder_btn;
     QProgressBar *progressBar;
-    QPushButton *pushButton_3;
+    QPushButton *stop_btn;
     QStackedWidget *stackedWidget;
     QWidget *page;
     QGridLayout *gridLayout_4;
@@ -49,11 +49,9 @@ public:
     QWidget *page_2;
     QGridLayout *gridLayout_3;
     QTextBrowser *textBrowser;
-    QPushButton *pushButton_2;
+    QPushButton *change_tab_btn;
     QMenuBar *menuBar;
     QMenu *menuTepTin;
-    QMenu *menuCaiDat;
-    QMenu *menuHienThi;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -81,10 +79,10 @@ public:
 
     gridLayout->addWidget(label, 0, 0, 1, 1);
 
-    pushButton = new QPushButton(centralWidget);
-    pushButton->setObjectName(QString::fromUtf8("pushButton"));
+    chose_folder_btn = new QPushButton(centralWidget);
+    chose_folder_btn->setObjectName(QString::fromUtf8("chose_folder_btn"));
 
-    gridLayout->addWidget(pushButton, 0, 1, 1, 1);
+    gridLayout->addWidget(chose_folder_btn, 0, 1, 1, 1);
 
     progressBar = new QProgressBar(centralWidget);
     progressBar->setObjectName(QString::fromUtf8("progressBar"));
@@ -102,10 +100,10 @@ public:
 
     gridLayout->addWidget(progressBar, 1, 0, 1, 1);
 
-    pushButton_3 = new QPushButton(centralWidget);
-    pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+    stop_btn = new QPushButton(centralWidget);
+    stop_btn->setObjectName(QString::fromUtf8("stop_btn"));
 
-    gridLayout->addWidget(pushButton_3, 1, 1, 1, 1);
+    gridLayout->addWidget(stop_btn, 1, 1, 1, 1);
 
     stackedWidget = new QStackedWidget(centralWidget);
     stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
@@ -144,10 +142,10 @@ public:
 
     gridLayout->addWidget(stackedWidget, 2, 0, 1, 2);
 
-    pushButton_2 = new QPushButton(centralWidget);
-    pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+    change_tab_btn = new QPushButton(centralWidget);
+    change_tab_btn->setObjectName(QString::fromUtf8("change_tab_btn"));
 
-    gridLayout->addWidget(pushButton_2, 3, 0, 1, 2);
+    gridLayout->addWidget(change_tab_btn, 3, 0, 1, 2);
 
 
     gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
@@ -158,10 +156,6 @@ public:
     menuBar->setGeometry(QRect(0, 0, 802, 25));
     menuTepTin = new QMenu(menuBar);
     menuTepTin->setObjectName(QString::fromUtf8("menuTepTin"));
-    menuCaiDat = new QMenu(menuBar);
-    menuCaiDat->setObjectName(QString::fromUtf8("menuCaiDat"));
-    menuHienThi = new QMenu(menuBar);
-    menuHienThi->setObjectName(QString::fromUtf8("menuHienThi"));
     MainWindow->setMenuBar(menuBar);
     mainToolBar = new QToolBar(MainWindow);
     mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
@@ -171,8 +165,6 @@ public:
     MainWindow->setStatusBar(statusBar);
 
     menuBar->addAction(menuTepTin->menuAction());
-    menuBar->addAction(menuCaiDat->menuAction());
-    menuBar->addAction(menuHienThi->menuAction());
     menuTepTin->addAction(actionChonTepTin);
     menuTepTin->addAction(actionChonThuMuc);
 
@@ -190,12 +182,10 @@ public:
     actionChonTepTin->setText(QApplication::translate("MainWindow", "Ch\341\273\215n t\341\273\207p tin ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     actionChonThuMuc->setText(QApplication::translate("MainWindow", "Ch\341\273\215n th\306\260 m\341\273\245c ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     label->setText(QString());
-    pushButton->setText(QApplication::translate("MainWindow", "Ch\341\273\215n folder", 0, QApplication::UnicodeUTF8));
-    pushButton_3->setText(QApplication::translate("MainWindow", "D\341\273\253ng", 0, QApplication::UnicodeUTF8));
-    pushButton_2->setText(QApplication::translate("MainWindow", "Hi\341\273\207n c\303\241c file \304\221\303\243 b\341\273\213 \304\221\341\273\225i \304\221u\303\264i", 0, QApplication::UnicodeUTF8));
+    chose_folder_btn->setText(QApplication::translate("MainWindow", "Ch\341\273\215n folder", 0, QApplication::UnicodeUTF8));
+    stop_btn->setText(QApplication::translate("MainWindow", "D\341\273\253ng", 0, QApplication::UnicodeUTF8));
+    change_tab_btn->setText(QApplication::translate("MainWindow", "Hi\341\273\207n th\341\273\213 c\303\241c t\341\273\207p tin \304\221\303\243 b\341\273\213 \304\221\341\273\225i \304\221u\303\264i m\341\273\237 r\341\273\231ng", 0, QApplication::UnicodeUTF8));
     menuTepTin->setTitle(QApplication::translate("MainWindow", "T\341\273\207p tin", 0, QApplication::UnicodeUTF8));
-    menuCaiDat->setTitle(QApplication::translate("MainWindow", "C\303\240i \304\221\341\272\267t", 0, QApplication::UnicodeUTF8));
-    menuHienThi->setTitle(QApplication::translate("MainWindow", "Hi\341\273\203n th\341\273\213", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };

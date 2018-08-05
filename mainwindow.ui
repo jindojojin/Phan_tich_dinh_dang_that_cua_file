@@ -28,7 +28,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="chose_folder_btn">
         <property name="text">
          <string>Chọn folder</string>
         </property>
@@ -63,7 +63,7 @@
        </widget>
       </item>
       <item row="1" column="1">
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QPushButton" name="stop_btn">
         <property name="text">
          <string>Dừng</string>
         </property>
@@ -137,9 +137,9 @@
        </widget>
       </item>
       <item row="3" column="0" colspan="2">
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="change_tab_btn">
         <property name="text">
-         <string>Hiện các file đã bị đổi đuôi</string>
+         <string>Hiện thị các tệp tin đã bị đổi đuôi mở rộng</string>
         </property>
        </widget>
       </item>
@@ -163,19 +163,7 @@
     <addaction name="actionChonTepTin"/>
     <addaction name="actionChonThuMuc"/>
    </widget>
-   <widget class="QMenu" name="menuCaiDat">
-    <property name="title">
-     <string>Cài đặt</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuHienThi">
-    <property name="title">
-     <string>Hiển thị</string>
-    </property>
-   </widget>
    <addaction name="menuTepTin"/>
-   <addaction name="menuCaiDat"/>
-   <addaction name="menuHienThi"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">

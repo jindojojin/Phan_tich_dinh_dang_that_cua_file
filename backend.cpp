@@ -2,7 +2,8 @@
 #include "QProcess"
 #include "QDebug"
 #include "QDir"
-
+#include "QThread"
+#include "workerthread.h"
 Backend::Backend(QObject *parent) :
     QObject(parent)
 {
@@ -11,12 +12,12 @@ Backend::Backend(QObject *parent) :
 void Backend::resetAll(){
     this->totalFolders =0;
     this->files.clear();
-    this->running=true;
+    emit
     this->isTotalFileEqualZero=false;
 }
 
 void Backend::getAllFile(QString folder_path){
-    if(this->running == false) {return;}
+    if(((WorkerThread *) QThread::currentThread())->isTer()) {return;}
     QDir folder(folder_path);
     this->totalFolders+= (folder.count() -2); // dem so thu muc + tep tin trong folder nay
 
@@ -31,7 +32,7 @@ void Backend::getAllFile(QString folder_path){
         this->totalFolders -= 1;
         this->getAllFile(folder_path+"/"+ b);
     }
-    if(this->totalFolders ==0 && !(this->isTotalFileEqualZero)){
+    if(this->totalFolders ==0 && !(this->isTotalFileEqualZero) && !((WorkerThread *) QThread::currentThread())->isTer()){
         this->isTotalFileEqualZero = true;
         qDebug()<< "Tong so file: "<< this->files.size();
         emit setProgressRange(this->files.size());
@@ -41,11 +42,16 @@ void Backend::getAllFile(QString folder_path){
 void Backend::readInfo(){
     int current = 0;
     foreach(QString str, this->files){
-        if(this->running == false) return;
+        if(((WorkerThread *) QThread::currentThread())->isTer()) {this->resetAll();break;}
+//        qDebug() << ((WorkerThread *) QThread::currentThread())->isTer();
         current++;
         this->run(str);
         emit changeProcessBar(current);
     }
+    emit showFinishDialog();
+    emit setStatus("finished");
+//    qDebug() << ((WorkerThread *) QThread::currentThread())->isTer();
+
 }
 
 void Backend::run(QString filePath){
@@ -54,7 +60,7 @@ void Backend::run(QString filePath){
     process.start("exif.exe -r \""+filePath+"\"");
     process.waitForFinished();
     QString file_information(process.readAllStandardOutput());
-    QRegExp file_name_matcher("(File Name                       : )([a-zA-Z0-9.]*)");
+    QRegExp file_name_matcher("(File Name                       : )([^\\n]*)");
     QRegExp file_type_matcher("(File Type                       : )([a-zA-Z0-9]*)");
     QRegExp file_extension_matcher("(File Type Extension             : )([a-zA-Z0-9]*)");
     file_name_matcher.indexIn(file_information);
@@ -68,13 +74,8 @@ void Backend::run(QString filePath){
     emit sendStringToGui(output);
     //Kiem tra duoi file co bi thay doi khong
     if(fileExtension.length() > 0 &&
-            (fileExtension.toUpper() != filePath.right(fileExtension.length()).toUpper())
+            QString::compare(fileExtension,filePath.right(fileExtension.length()),Qt::CaseInsensitive)
       ){
         emit sendResultToTable(fileName+";"+fileType+";"+fileExtension+";"+filePath);
     }
-}
-
-void Backend::stop(){
-    qDebug() << "QICK_STOP";
-    this->running= false;
 }
