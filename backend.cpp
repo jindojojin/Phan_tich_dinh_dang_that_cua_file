@@ -1,4 +1,4 @@
-#include "backend.h"
+﻿#include "backend.h"
 #include "QProcess"
 #include "QDebug"
 #include "QDir"
@@ -41,6 +41,7 @@ void Backend::getAllFile(QString folder_path){
 }
 void Backend::readInfo(){
     int current = 0;
+    emit sendStringToGui(QString::fromUtf8("Ðang phân tích các tệp tin ...."));
     foreach(QString str, this->files){
         if(((WorkerThread *) QThread::currentThread())->isTer()) {this->resetAll();break;}
 //        qDebug() << ((WorkerThread *) QThread::currentThread())->isTer();
@@ -66,12 +67,12 @@ void Backend::run(QString filePath){
     file_name_matcher.indexIn(file_information);
     file_type_matcher.indexIn(file_information);
     file_extension_matcher.indexIn(file_information);
-    QString fileName = file_name_matcher.cap(2);
+    QString fileName = file_name_matcher.cap(2).replace("\\n","");
     QString fileType = file_type_matcher.cap(2);
     QString fileExtension = file_extension_matcher.cap(2);
-    QString output;
-    output = " file path: " + filePath + " real type: "+file_type_matcher.cap(2) + " real extension: "+file_extension_matcher.cap(2);
-    emit sendStringToGui(output);
+//    QString output;
+//    output = " file path: " + filePath + " real type: "+file_type_matcher.cap(2) + " real extension: "+file_extension_matcher.cap(2);
+    emit sendResultToTable_2(fileName+";"+fileType+";"+fileExtension+";"+filePath);
     //Kiem tra duoi file co bi thay doi khong
     if(fileExtension.length() > 0 &&
             QString::compare(fileExtension,filePath.right(fileExtension.length()),Qt::CaseInsensitive)

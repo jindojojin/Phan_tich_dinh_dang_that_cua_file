@@ -54,6 +54,7 @@ void MainWindow::setStatus(QString status){
         this->ui->chose_folder_btn->setEnabled(false);
         }
     else if(status=="finished"){
+        this->ui->label->setText(QString::fromUtf8("Đã hoàn thành quá trình phân tích"));
         this->ui->stop_btn->setEnabled(false);
         this->ui->change_tab_btn->setEnabled(true);
         this->ui->chose_folder_btn->setEnabled(true);

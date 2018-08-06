@@ -19,17 +19,21 @@ public:
     ~MainWindow();
 
 private slots:
-
     void on_chose_folder_btn_clicked();
 
     void on_change_tab_btn_clicked();
 
     void on_stop_btn_clicked();
 
+    void on_export_csv_btn_clicked();
+
+    void on_tableView_doubleClicked(const QModelIndex &index);
 private:
     QStandardItemModel *model;
+    QStandardItemModel *model_2;
     Ui::MainWindow *ui;
-    QString folder;
+    QString csvString; //save wrong file only
+    QString csvString_2; // save total result
     int totalWrongFile;
     void resetGUI();
     void setupTable();
@@ -40,9 +44,11 @@ signals:
     void resetBackend();
     void stopProcess();
     void renewBackend();// khoi dong lai backend sau khi bi dung
+    void itemClick();
 public slots:
     void showInfoToScreen(QString);
     void showResultToTable(QString);
+    void showResultToTable_2(QString);
     void changeProcessBar(int);
     void setProgressRange(int);
     void showFinishDialog();

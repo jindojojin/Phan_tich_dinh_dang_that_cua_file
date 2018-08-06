@@ -17,6 +17,7 @@ private:
 signals:
     void sendStringToGui(QString);
     void sendResultToTable(QString);
+    void sendResultToTable_2(QString);
     void changeProcessBar(int);
     void setProgressRange(int);
     void showFinishDialog();

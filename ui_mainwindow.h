@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Sun Aug 5 10:21:01 2018
+** Created: Mon Aug 6 18:31:45 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -24,7 +24,6 @@
 #include <QtGui/QStackedWidget>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTableView>
-#include <QtGui/QTextBrowser>
 #include <QtGui/QToolBar>
 #include <QtGui/QWidget>
 
@@ -36,7 +35,6 @@ public:
     QAction *actionChonTepTin;
     QAction *actionChonThuMuc;
     QWidget *centralWidget;
-    QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
     QLabel *label;
     QPushButton *chose_folder_btn;
@@ -48,8 +46,9 @@ public:
     QTableView *tableView;
     QWidget *page_2;
     QGridLayout *gridLayout_3;
-    QTextBrowser *textBrowser;
+    QTableView *tableView_2;
     QPushButton *change_tab_btn;
+    QPushButton *export_csv_btn;
     QMenuBar *menuBar;
     QMenu *menuTepTin;
     QToolBar *mainToolBar;
@@ -59,28 +58,32 @@ public:
     {
     if (MainWindow->objectName().isEmpty())
         MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-    MainWindow->resize(802, 489);
+    MainWindow->resize(762, 497);
     actionChonTepTin = new QAction(MainWindow);
     actionChonTepTin->setObjectName(QString::fromUtf8("actionChonTepTin"));
     actionChonThuMuc = new QAction(MainWindow);
     actionChonThuMuc->setObjectName(QString::fromUtf8("actionChonThuMuc"));
     centralWidget = new QWidget(MainWindow);
     centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-    gridLayout_2 = new QGridLayout(centralWidget);
-    gridLayout_2->setSpacing(6);
-    gridLayout_2->setMargin(11);
-    gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-    gridLayout = new QGridLayout();
+    gridLayout = new QGridLayout(centralWidget);
     gridLayout->setSpacing(6);
+    gridLayout->setMargin(11);
     gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
     label = new QLabel(centralWidget);
     label->setObjectName(QString::fromUtf8("label"));
+    QFont font;
+    font.setPointSize(11);
+    label->setFont(font);
     label->setWordWrap(true);
 
     gridLayout->addWidget(label, 0, 0, 1, 1);
 
     chose_folder_btn = new QPushButton(centralWidget);
     chose_folder_btn->setObjectName(QString::fromUtf8("chose_folder_btn"));
+    QFont font1;
+    font1.setPointSize(10);
+    chose_folder_btn->setFont(font1);
+    chose_folder_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
     gridLayout->addWidget(chose_folder_btn, 0, 1, 1, 1);
 
@@ -102,6 +105,8 @@ public:
 
     stop_btn = new QPushButton(centralWidget);
     stop_btn->setObjectName(QString::fromUtf8("stop_btn"));
+    stop_btn->setFont(font1);
+    stop_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
     gridLayout->addWidget(stop_btn, 1, 1, 1, 1);
 
@@ -115,11 +120,14 @@ public:
     gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
     tableView = new QTableView(page);
     tableView->setObjectName(QString::fromUtf8("tableView"));
+    tableView->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
     tableView->setAutoFillBackground(true);
     tableView->setStyleSheet(QString::fromUtf8(""));
+    tableView->setEditTriggers(QAbstractItemView::EditKeyPressed);
     tableView->setGridStyle(Qt::SolidLine);
+    tableView->setSortingEnabled(true);
 
-    gridLayout_4->addWidget(tableView, 0, 0, 1, 1);
+    gridLayout_4->addWidget(tableView, 0, 0, 1, 3);
 
     stackedWidget->addWidget(page);
     page_2 = new QWidget();
@@ -128,15 +136,11 @@ public:
     gridLayout_3->setSpacing(6);
     gridLayout_3->setMargin(11);
     gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-    textBrowser = new QTextBrowser(page_2);
-    textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-    QFont font;
-    font.setPointSize(12);
-    textBrowser->setFont(font);
-    textBrowser->setFrameShape(QFrame::NoFrame);
-    textBrowser->setFrameShadow(QFrame::Sunken);
+    tableView_2 = new QTableView(page_2);
+    tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
+    tableView_2->setSortingEnabled(true);
 
-    gridLayout_3->addWidget(textBrowser, 0, 0, 2, 1);
+    gridLayout_3->addWidget(tableView_2, 0, 0, 1, 1);
 
     stackedWidget->addWidget(page_2);
 
@@ -144,16 +148,22 @@ public:
 
     change_tab_btn = new QPushButton(centralWidget);
     change_tab_btn->setObjectName(QString::fromUtf8("change_tab_btn"));
+    change_tab_btn->setFont(font1);
+    change_tab_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout->addWidget(change_tab_btn, 3, 0, 1, 2);
+    gridLayout->addWidget(change_tab_btn, 3, 0, 1, 1);
 
+    export_csv_btn = new QPushButton(centralWidget);
+    export_csv_btn->setObjectName(QString::fromUtf8("export_csv_btn"));
+    export_csv_btn->setFont(font1);
+    export_csv_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout_2->addLayout(gridLayout, 0, 0, 1, 1);
+    gridLayout->addWidget(export_csv_btn, 3, 1, 1, 1);
 
     MainWindow->setCentralWidget(centralWidget);
     menuBar = new QMenuBar(MainWindow);
     menuBar->setObjectName(QString::fromUtf8("menuBar"));
-    menuBar->setGeometry(QRect(0, 0, 802, 25));
+    menuBar->setGeometry(QRect(0, 0, 762, 25));
     menuTepTin = new QMenu(menuBar);
     menuTepTin->setObjectName(QString::fromUtf8("menuTepTin"));
     MainWindow->setMenuBar(menuBar);
@@ -170,7 +180,7 @@ public:
 
     retranslateUi(MainWindow);
 
-    stackedWidget->setCurrentIndex(0);
+    stackedWidget->setCurrentIndex(1);
 
 
     QMetaObject::connectSlotsByName(MainWindow);
@@ -182,9 +192,10 @@ public:
     actionChonTepTin->setText(QApplication::translate("MainWindow", "Ch\341\273\215n t\341\273\207p tin ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     actionChonThuMuc->setText(QApplication::translate("MainWindow", "Ch\341\273\215n th\306\260 m\341\273\245c ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     label->setText(QString());
-    chose_folder_btn->setText(QApplication::translate("MainWindow", "Ch\341\273\215n folder", 0, QApplication::UnicodeUTF8));
+    chose_folder_btn->setText(QApplication::translate("MainWindow", "Ch\341\273\215n th\306\260 m\341\273\245c", 0, QApplication::UnicodeUTF8));
     stop_btn->setText(QApplication::translate("MainWindow", "D\341\273\253ng", 0, QApplication::UnicodeUTF8));
     change_tab_btn->setText(QApplication::translate("MainWindow", "Hi\341\273\207n th\341\273\213 c\303\241c t\341\273\207p tin \304\221\303\243 b\341\273\213 \304\221\341\273\225i \304\221u\303\264i m\341\273\237 r\341\273\231ng", 0, QApplication::UnicodeUTF8));
+    export_csv_btn->setText(QApplication::translate("MainWindow", "Xu\341\272\245t ra t\341\273\207p tin csv", 0, QApplication::UnicodeUTF8));
     menuTepTin->setTitle(QApplication::translate("MainWindow", "T\341\273\207p tin", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

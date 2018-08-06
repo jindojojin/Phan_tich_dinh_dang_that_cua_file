@@ -15,6 +15,7 @@ int main(int argc, char *argv[])
     QObject::connect(&w,SIGNAL(callBackend(QString)), backend,SLOT(getAllFile(QString)));
     QObject::connect(backend,SIGNAL(sendStringToGui(QString)),&w,SLOT(showInfoToScreen(QString)));
     QObject::connect(backend,SIGNAL(sendResultToTable(QString)),&w,SLOT(showResultToTable(QString)));
+    QObject::connect(backend,SIGNAL(sendResultToTable_2(QString)),&w,SLOT(showResultToTable_2(QString)));
     QObject::connect(&w,SIGNAL(resetBackend()),backend,SLOT(resetAll()));
     QObject::connect(backend,SIGNAL(changeProcessBar(int)),&w, SLOT(changeProcessBar(int)));
     QObject::connect(backend,SIGNAL(setProgressRange(int)),&w,SLOT(setProgressRange(int)));
