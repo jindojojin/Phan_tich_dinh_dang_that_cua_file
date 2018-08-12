@@ -123,8 +123,7 @@ void MainWindow::setProgressRange(int maxValue){
     this->ui->progressBar->setRange(0,maxValue);
 }
 
-void MainWindow::on_chose_folder_btn_clicked()
-{
+void MainWindow::chose_folder(){
     QString folder = QFileDialog::getExistingDirectory(this, QString::fromUtf8("Chọn thư mục quét"),
                                                      "/home",
                                                      QFileDialog::ShowDirsOnly
@@ -136,6 +135,11 @@ void MainWindow::on_chose_folder_btn_clicked()
     emit callBackend(folder);
     this->resetGUI();
     this->setStatus("running");
+}
+
+void MainWindow::on_chose_folder_btn_clicked()
+{
+    this->chose_folder();
 }
 
 void MainWindow::on_change_tab_btn_clicked()
@@ -184,4 +188,14 @@ void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
     if(!QFile::copy(file,"review_file."+realExtension)){
         QDesktopServices::openUrl(QUrl("review_file."+realExtension));
     }
+}
+
+void MainWindow::on_actionChonTepTin_triggered()
+{
+
+}
+
+void MainWindow::on_actionChonThuMuc_triggered()
+{
+    this->chose_folder();
 }

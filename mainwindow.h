@@ -28,6 +28,10 @@ private slots:
     void on_export_csv_btn_clicked();
 
     void on_tableView_doubleClicked(const QModelIndex &index);
+    void on_actionChonTepTin_triggered();
+
+    void on_actionChonThuMuc_triggered();
+
 private:
     QStandardItemModel *model;
     QStandardItemModel *model_2;
@@ -37,6 +41,7 @@ private:
     int totalWrongFile;
     void resetGUI();
     void setupTable();
+    void chose_folder();
     QThread * thread;
     Backend * backend;
 signals:
