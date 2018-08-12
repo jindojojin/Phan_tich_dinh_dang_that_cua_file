@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Aug 6 18:31:45 2018
+** Created: Mon Aug 6 20:48:44 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -58,7 +58,7 @@ public:
     {
     if (MainWindow->objectName().isEmpty())
         MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-    MainWindow->resize(762, 497);
+    MainWindow->resize(831, 575);
     actionChonTepTin = new QAction(MainWindow);
     actionChonTepTin->setObjectName(QString::fromUtf8("actionChonTepTin"));
     actionChonThuMuc = new QAction(MainWindow);
@@ -74,6 +74,7 @@ public:
     QFont font;
     font.setPointSize(11);
     label->setFont(font);
+    label->setCursor(QCursor(Qt::ForbiddenCursor));
     label->setWordWrap(true);
 
     gridLayout->addWidget(label, 0, 0, 1, 1);
@@ -85,7 +86,7 @@ public:
     chose_folder_btn->setFont(font1);
     chose_folder_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout->addWidget(chose_folder_btn, 0, 1, 1, 1);
+    gridLayout->addWidget(chose_folder_btn, 0, 1, 1, 2);
 
     progressBar = new QProgressBar(centralWidget);
     progressBar->setObjectName(QString::fromUtf8("progressBar"));
@@ -94,6 +95,8 @@ public:
     sizePolicy.setVerticalStretch(0);
     sizePolicy.setHeightForWidth(progressBar->sizePolicy().hasHeightForWidth());
     progressBar->setSizePolicy(sizePolicy);
+    progressBar->setFont(font);
+    progressBar->setCursor(QCursor(Qt::ForbiddenCursor));
     progressBar->setMaximum(0);
     progressBar->setValue(0);
     progressBar->setTextVisible(true);
@@ -108,7 +111,7 @@ public:
     stop_btn->setFont(font1);
     stop_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout->addWidget(stop_btn, 1, 1, 1, 1);
+    gridLayout->addWidget(stop_btn, 1, 1, 1, 2);
 
     stackedWidget = new QStackedWidget(centralWidget);
     stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
@@ -127,7 +130,7 @@ public:
     tableView->setGridStyle(Qt::SolidLine);
     tableView->setSortingEnabled(true);
 
-    gridLayout_4->addWidget(tableView, 0, 0, 1, 3);
+    gridLayout_4->addWidget(tableView, 0, 0, 1, 2);
 
     stackedWidget->addWidget(page);
     page_2 = new QWidget();
@@ -144,26 +147,26 @@ public:
 
     stackedWidget->addWidget(page_2);
 
-    gridLayout->addWidget(stackedWidget, 2, 0, 1, 2);
+    gridLayout->addWidget(stackedWidget, 2, 0, 1, 3);
 
     change_tab_btn = new QPushButton(centralWidget);
     change_tab_btn->setObjectName(QString::fromUtf8("change_tab_btn"));
     change_tab_btn->setFont(font1);
     change_tab_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout->addWidget(change_tab_btn, 3, 0, 1, 1);
+    gridLayout->addWidget(change_tab_btn, 3, 0, 1, 2);
 
     export_csv_btn = new QPushButton(centralWidget);
     export_csv_btn->setObjectName(QString::fromUtf8("export_csv_btn"));
     export_csv_btn->setFont(font1);
     export_csv_btn->setCursor(QCursor(Qt::PointingHandCursor));
 
-    gridLayout->addWidget(export_csv_btn, 3, 1, 1, 1);
+    gridLayout->addWidget(export_csv_btn, 3, 2, 1, 1);
 
     MainWindow->setCentralWidget(centralWidget);
     menuBar = new QMenuBar(MainWindow);
     menuBar->setObjectName(QString::fromUtf8("menuBar"));
-    menuBar->setGeometry(QRect(0, 0, 762, 25));
+    menuBar->setGeometry(QRect(0, 0, 831, 25));
     menuTepTin = new QMenu(menuBar);
     menuTepTin->setObjectName(QString::fromUtf8("menuTepTin"));
     MainWindow->setMenuBar(menuBar);
@@ -180,7 +183,7 @@ public:
 
     retranslateUi(MainWindow);
 
-    stackedWidget->setCurrentIndex(1);
+    stackedWidget->setCurrentIndex(0);
 
 
     QMetaObject::connectSlotsByName(MainWindow);

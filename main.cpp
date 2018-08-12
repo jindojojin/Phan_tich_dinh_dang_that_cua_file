@@ -24,5 +24,6 @@ int main(int argc, char *argv[])
     QObject::connect(backend,SIGNAL(showFinishDialog()),&w, SLOT(showFinishDialog()));
     QObject::connect(backend,SIGNAL(setStatus(QString)),&w, SLOT(setStatus(QString)));
 
+
     return a.exec();
 }

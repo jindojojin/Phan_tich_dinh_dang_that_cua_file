@@ -17,7 +17,8 @@ void Backend::resetAll(){
 }
 
 void Backend::getAllFile(QString folder_path){
-    if(((WorkerThread *) QThread::currentThread())->isTer()) {return;}
+    if(((WorkerThread *) QThread::currentThread())->isTer()){
+        return;}
     QDir folder(folder_path);
     this->totalFolders+= (folder.count() -2); // dem so thu muc + tep tin trong folder nay
 

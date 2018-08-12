@@ -54,6 +54,7 @@ void MainWindow::setStatus(QString status){
         this->ui->chose_folder_btn->setEnabled(false);
         }
     else if(status=="finished"){
+        this->ui->label->setText(QString::fromUtf8("Đã hoàn thành quá trình phân tích"));
         this->ui->stop_btn->setEnabled(false);
         this->ui->change_tab_btn->setEnabled(true);
         this->ui->chose_folder_btn->setEnabled(true);
@@ -155,22 +156,24 @@ void MainWindow::on_stop_btn_clicked()
 {
     qDebug() << "Click to stop";
     emit stopProcess();
+    this->setStatus("finished");
 }
 
 void MainWindow::on_export_csv_btn_clicked()
 {
-    qDebug() << "Export csv file";
-    qDebug() << this->csvString;
+
+//    qDebug() << "Export csv file";
+//    qDebug() << this->csvString;
     QString filename = QFileDialog::getSaveFileName(this,"save file","Ket_qua_phan_tich_",".csv");
     qDebug() << filename;
     QFile file(filename);
     if(file.open(QIODevice::WriteOnly)){
         QTextStream writer(&file);
         writer.setCodec("UTF-8");
-        writer<<"Tên tệp tin,Định dạng tệp tin,Đuôi mở rộng đúng,Đường dẫn,"<<endl << this->csvString;
+        writer<<QString::fromUtf8("Ten tep tin,Dinh dang tep tin,Duoi mo rong dung,Duong dan,")<<endl << this->csvString;
+        QMessageBox::information(this,QString::fromUtf8("Hoàn tất"),QString::fromUtf8("Đã xuất thành công kết quả phân tích ra tệp tin csv"));
         file.close();
-    }
-
+    }else{QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));}
 }
 
 void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
