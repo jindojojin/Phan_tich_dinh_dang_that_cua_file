@@ -20,24 +20,22 @@ public:
 
 private slots:
     void on_chose_folder_btn_clicked();
-
     void on_change_tab_btn_clicked();
-
     void on_stop_btn_clicked();
-
     void on_export_csv_btn_clicked();
-
     void on_tableView_doubleClicked(const QModelIndex &index);
     void on_actionChonTepTin_triggered();
-
     void on_actionChonThuMuc_triggered();
-
+    void on_tableView_clicked(const QModelIndex &index);
+    void viewDetail();
 private:
     QStandardItemModel *model;
     QStandardItemModel *model_2;
     Ui::MainWindow *ui;
     QString csvString; //save wrong file only
     QString csvString_2; // save total result
+    QModelIndex index_triggered;
+    QModelIndex index_triggered_2;
     int totalWrongFile;
     void resetGUI();
     void setupTable();
@@ -58,6 +56,7 @@ public slots:
     void changeProcessBar(int);
     void setProgressRange(int);
     void showFinishDialog();
+    void reviewFile();
     void setStatus(QString); //thiet lap trang thai cua giao dien do hoa
 };
 

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'file_detail_window.ui'
 **
-** Created: Sun Aug 12 21:26:20 2018
+** Created: Sun Aug 12 21:34:40 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -46,7 +46,7 @@ public:
     label->setFont(font);
     file_path_label = new QLabel(File_Detail_Window);
     file_path_label->setObjectName(QString::fromUtf8("file_path_label"));
-    file_path_label->setGeometry(QRect(140, 20, 53, 16));
+    file_path_label->setGeometry(QRect(140, 20, 531, 16));
     file_path_label->setFont(font);
 
     retranslateUi(File_Detail_Window);

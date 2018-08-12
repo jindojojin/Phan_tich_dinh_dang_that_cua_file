@@ -190,6 +190,7 @@ void MainWindow::on_export_csv_btn_clicked()
     }else{QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));}
 }
 
+
 void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
 {
     int row = index.row();
@@ -208,4 +209,30 @@ void MainWindow::on_actionChonTepTin_triggered()
 void MainWindow::on_actionChonThuMuc_triggered()
 {
     this->chose_folder();
+}
+
+void MainWindow::reviewFile(){
+    this->on_tableView_doubleClicked(this->index_triggered);
+}
+void MainWindow::viewDetail(){
+    int row = this->index_triggered.row();
+    QString realExtension = this->index_triggered.sibling(row,2).data().toString();
+    QString file = this->index_triggered.sibling(row,3).data().toString();
+    File_Detail_Window *f = new File_Detail_Window();
+    f->setFilePath(file);
+    f->show();
+}
+
+void MainWindow::on_tableView_clicked(const QModelIndex &index)
+{
+    this->index_triggered =index;
+    QMenu *menu = new QMenu(this->ui->tableView);
+    QAction *Open = new QAction(QString::fromUtf8("Mở tệp tin này"),menu);
+    menu->addAction(Open);
+    QAction *ViewDetail = new QAction(QString::fromUtf8("Xem chi tiết phân tích tệp tin này"),menu);
+    menu->addAction(ViewDetail);
+
+    menu->show();
+    connect(Open,SIGNAL(triggered()),this,SLOT(reviewFile()));
+    connect(ViewDetail,SIGNAL(triggered()),this,SLOT(viewDetail()));
 }
