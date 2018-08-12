@@ -42,6 +42,7 @@ private:
     void resetGUI();
     void setupTable();
     void chose_folder();
+    void chose_file();
     QThread * thread;
     Backend * backend;
 signals:

@@ -5,6 +5,7 @@
 #include "QMessageBox"
 #include "QDesktopServices"
 #include "QUrl"
+#include "file_detail_window.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -137,6 +138,15 @@ void MainWindow::chose_folder(){
     this->setStatus("running");
 }
 
+void MainWindow::chose_file(){
+    QString file = QFileDialog::getOpenFileName(this, QString::fromUtf8("Chọn thư mục quét"),
+                                                "/home");
+    this->ui->label->setText(QString::fromUtf8("Phân tích tệp tin :")+file);
+    File_Detail_Window *f = new File_Detail_Window();
+    f->setFilePath(file);
+    f->show();
+}
+
 void MainWindow::on_chose_folder_btn_clicked()
 {
     this->chose_folder();
@@ -192,7 +202,7 @@ void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
 
 void MainWindow::on_actionChonTepTin_triggered()
 {
-
+    this->chose_file();
 }
 
 void MainWindow::on_actionChonThuMuc_triggered()

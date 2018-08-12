@@ -13,10 +13,16 @@ TEMPLATE = app
 SOURCES += main.cpp \
         mainwindow.cpp \
     backend.cpp \
-    workerthread.cpp
+    workerthread.cpp \
+    file_detail_window.cpp
 
 HEADERS  += mainwindow.h \
     backend.h \
-    workerthread.h
+    workerthread.h \
+    file_detail_window.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    file_detail_window.ui
+
+
+
