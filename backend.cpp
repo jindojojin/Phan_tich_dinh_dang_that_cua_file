@@ -68,7 +68,8 @@ void Backend::run(QString filePath){
     file_name_matcher.indexIn(file_information);
     file_type_matcher.indexIn(file_information);
     file_extension_matcher.indexIn(file_information);
-    QString fileName = file_name_matcher.cap(2).replace("\\n","");
+    QString fileName1 = file_name_matcher.cap(2);
+    QString fileName = fileName1.left(fileName1.length()-1);//bo ki tu /n
     QString fileType = file_type_matcher.cap(2);
     QString fileExtension = file_extension_matcher.cap(2);
 //    QString output;

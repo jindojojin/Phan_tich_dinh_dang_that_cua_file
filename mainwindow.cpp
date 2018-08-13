@@ -239,33 +239,8 @@ void MainWindow::viewDetail(){
     f->show();
 }
 
-void MainWindow::create_submenu(QPoint point){
+void MainWindow::create_submenu(QPoint pos){
     qDebug()<<"submenu created!";
-}
-
-void MainWindow::on_tableView_customContextMenuRequested(const QPoint &pos)
-{
-        this->index_triggered = this->ui->tableView->indexAt(pos);
-        if(!this->index_triggered.isValid()) return;
-        QMenu *menu = new QMenu(this->ui->tableView);
-        QAction *QickOpen = new QAction(QString::fromUtf8("Mở tệp tin này bằng cách thông thường"),menu);
-        menu->addAction(QickOpen);
-        QAction *Open = new QAction(QString::fromUtf8("Mở tệp tin này với định dạng đúng"),menu);
-        menu->addAction(Open);
-        QAction *ViewDetail = new QAction(QString::fromUtf8("Xem chi tiết phân tích tệp tin này"),menu);
-        menu->addAction(ViewDetail);
-        QPoint newPoint = this->ui->tableView->mapToGlobal(pos);
-        menu->mapToParent(newPoint);
-        menu->move(newPoint);
-        menu->show();
-        connect(Open,SIGNAL(triggered()),this,SLOT(reviewFile()));
-        connect(ViewDetail,SIGNAL(triggered()),this,SLOT(viewDetail()));
-        connect(QickOpen,SIGNAL(triggered()),this, SLOT(qickOpenFile()));
-}
-
-void MainWindow::on_tableView_2_customContextMenuRequested(const QPoint &pos)
-{
-    this->index_triggered = this->ui->tableView_2->indexAt(pos);
     if(!this->index_triggered.isValid()) return;
     QMenu *menu = new QMenu(this->ui->tableView);
     QAction *QickOpen = new QAction(QString::fromUtf8("Mở tệp tin này bằng cách thông thường"),menu);
@@ -281,4 +256,17 @@ void MainWindow::on_tableView_2_customContextMenuRequested(const QPoint &pos)
     connect(Open,SIGNAL(triggered()),this,SLOT(reviewFile()));
     connect(ViewDetail,SIGNAL(triggered()),this,SLOT(viewDetail()));
     connect(QickOpen,SIGNAL(triggered()),this, SLOT(qickOpenFile()));
+}
+
+void MainWindow::on_tableView_customContextMenuRequested(const QPoint &pos)
+{
+    this->index_triggered = this->ui->tableView->indexAt(pos);
+    this->create_submenu(pos);
+
+}
+
+void MainWindow::on_tableView_2_customContextMenuRequested(const QPoint &pos)
+{
+    this->index_triggered = this->ui->tableView_2->indexAt(pos);
+    this->create_submenu(pos);
 }
