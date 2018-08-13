@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'mainwindow.h'
 **
-** Created: Sun Aug 12 22:51:53 2018
+** Created: Mon Aug 13 11:12:57 2018
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.4.0)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MainWindow[] = {
        1,       // revision
        0,       // classname
        0,    0, // classinfo
-      22,   10, // methods
+      23,   10, // methods
        0,    0, // properties
        0,    0, // enums/sets
 
@@ -42,16 +42,17 @@ static const uint qt_meta_data_MainWindow[] = {
      203,  197,   11,   11, 0x08,
      243,   11,   11,   11, 0x08,
      275,   11,   11,   11, 0x08,
-     307,  197,   11,   11, 0x08,
-     341,   11,   11,   11, 0x08,
-     354,   11,   11,   11, 0x0a,
-     380,   11,   11,   11, 0x0a,
-     407,   11,   11,   11, 0x0a,
-     436,   11,   11,   11, 0x0a,
-     458,   11,   11,   11, 0x0a,
-     480,   11,   11,   11, 0x0a,
+     307,   11,   11,   11, 0x08,
+     320,   11,   11,   11, 0x08,
+     347,  343,   11,   11, 0x08,
+     395,   11,   11,   11, 0x0a,
+     421,   11,   11,   11, 0x0a,
+     448,   11,   11,   11, 0x0a,
+     477,   11,   11,   11, 0x0a,
      499,   11,   11,   11, 0x0a,
-     512,   11,   11,   11, 0x0a,
+     521,   11,   11,   11, 0x0a,
+     540,   11,   11,   11, 0x0a,
+     553,   11,   11,   11, 0x0a,
 
        0        // eod
 };
@@ -66,8 +67,9 @@ static const char qt_meta_stringdata_MainWindow[] = {
     "index\0on_tableView_doubleClicked(QModelIndex)\0"
     "on_actionChonTepTin_triggered()\0"
     "on_actionChonThuMuc_triggered()\0"
-    "on_tableView_clicked(QModelIndex)\0"
-    "viewDetail()\0showInfoToScreen(QString)\0"
+    "viewDetail()\0create_submenu(QPoint)\0"
+    "pos\0on_tableView_customContextMenuRequested(QPoint)\0"
+    "showInfoToScreen(QString)\0"
     "showResultToTable(QString)\0"
     "showResultToTable_2(QString)\0"
     "changeProcessBar(int)\0setProgressRange(int)\0"
@@ -112,18 +114,19 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 9: on_tableView_doubleClicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
         case 10: on_actionChonTepTin_triggered(); break;
         case 11: on_actionChonThuMuc_triggered(); break;
-        case 12: on_tableView_clicked((*reinterpret_cast< const QModelIndex(*)>(_a[1]))); break;
-        case 13: viewDetail(); break;
-        case 14: showInfoToScreen((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 15: showResultToTable((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 16: showResultToTable_2((*reinterpret_cast< QString(*)>(_a[1]))); break;
-        case 17: changeProcessBar((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 18: setProgressRange((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 19: showFinishDialog(); break;
-        case 20: reviewFile(); break;
-        case 21: setStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 12: viewDetail(); break;
+        case 13: create_submenu((*reinterpret_cast< QPoint(*)>(_a[1]))); break;
+        case 14: on_tableView_customContextMenuRequested((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
+        case 15: showInfoToScreen((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 16: showResultToTable((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 17: showResultToTable_2((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 18: changeProcessBar((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 19: setProgressRange((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 20: showFinishDialog(); break;
+        case 21: reviewFile(); break;
+        case 22: setStatus((*reinterpret_cast< QString(*)>(_a[1]))); break;
         }
-        _id -= 22;
+        _id -= 23;
     }
     return _id;
 }

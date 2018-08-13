@@ -26,8 +26,10 @@ private slots:
     void on_tableView_doubleClicked(const QModelIndex &index);
     void on_actionChonTepTin_triggered();
     void on_actionChonThuMuc_triggered();
-    void on_tableView_clicked(const QModelIndex &index);
     void viewDetail();
+    void create_submenu(QPoint);
+    void on_tableView_customContextMenuRequested(const QPoint &pos);
+
 private:
     QStandardItemModel *model;
     QStandardItemModel *model_2;
@@ -35,7 +37,6 @@ private:
     QString csvString; //save wrong file only
     QString csvString_2; // save total result
     QModelIndex index_triggered;
-    QModelIndex index_triggered_2;
     int totalWrongFile;
     void resetGUI();
     void setupTable();

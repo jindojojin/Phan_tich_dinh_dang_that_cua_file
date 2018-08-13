@@ -1,0 +1,9 @@
+﻿nirsoft : tcp/udp : 
++ tcplogview   
++ liveTcpUdpWatch
+
+hiển thị xplico
+
+web: sip & rtp
+
+nirsoft thiếu : 1 ip chưa ra nhiều domain -> dnsQuerySniffer

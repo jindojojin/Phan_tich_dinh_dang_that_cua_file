@@ -6,7 +6,7 @@
 #include "QDesktopServices"
 #include "QUrl"
 #include "file_detail_window.h"
-
+#include "QMouseEvent"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -75,6 +75,9 @@ void MainWindow::setupTable(){
     this->ui->tableView->setColumnWidth(2,130);
     this->ui->tableView->setColumnWidth(3,700);
     this->csvString.clear();
+    //debug right click menu qtableview
+    connect(this,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(create_submenu(QPoint)));
+    //
     this->ui->tableView->show();
 
     this->model_2 = new QStandardItemModel(0,4,this);
@@ -223,16 +226,26 @@ void MainWindow::viewDetail(){
     f->show();
 }
 
-void MainWindow::on_tableView_clicked(const QModelIndex &index)
-{
-    this->index_triggered =index;
-    QMenu *menu = new QMenu(this->ui->tableView);
-    QAction *Open = new QAction(QString::fromUtf8("Mở tệp tin này"),menu);
-    menu->addAction(Open);
-    QAction *ViewDetail = new QAction(QString::fromUtf8("Xem chi tiết phân tích tệp tin này"),menu);
-    menu->addAction(ViewDetail);
+void MainWindow::create_submenu(QPoint point){
+    qDebug()<<"submenu created!";
+}
 
-    menu->show();
-    connect(Open,SIGNAL(triggered()),this,SLOT(reviewFile()));
-    connect(ViewDetail,SIGNAL(triggered()),this,SLOT(viewDetail()));
+void MainWindow::on_tableView_customContextMenuRequested(const QPoint &pos)
+{
+        this->index_triggered = this->ui->tableView->indexAt(pos);
+        if(!this->index_triggered.isValid()) return;
+        QMenu *menu = new QMenu(this->ui->tableView);
+        QAction *Open = new QAction(QString::fromUtf8("Mở tệp tin này"),menu);
+        menu->addAction(Open);
+        QAction *ViewDetail = new QAction(QString::fromUtf8("Xem chi tiết phân tích tệp tin này"),menu);
+        menu->addAction(ViewDetail);
+//        pos.setX(pos.x()+100);
+        qDebug()<<pos;
+        QPoint newPoint = this->ui->tableView->mapToGlobal(pos);
+        qDebug() << newPoint;
+        menu->mapToParent(newPoint);
+        menu->move(newPoint);
+        menu->show();
+        connect(Open,SIGNAL(triggered()),this,SLOT(reviewFile()));
+        connect(ViewDetail,SIGNAL(triggered()),this,SLOT(viewDetail()));
 }

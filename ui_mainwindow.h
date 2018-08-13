@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Sun Aug 12 21:51:18 2018
+** Created: Mon Aug 13 10:01:40 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -123,7 +123,9 @@ public:
     gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
     tableView = new QTableView(page);
     tableView->setObjectName(QString::fromUtf8("tableView"));
-    tableView->viewport()->setProperty("cursor", QVariant(QCursor(Qt::ArrowCursor)));
+    tableView->viewport()->setProperty("cursor", QVariant(QCursor(Qt::WhatsThisCursor)));
+    tableView->setMouseTracking(false);
+    tableView->setContextMenuPolicy(Qt::CustomContextMenu);
     tableView->setAutoFillBackground(true);
     tableView->setStyleSheet(QString::fromUtf8(""));
     tableView->setEditTriggers(QAbstractItemView::EditKeyPressed);
