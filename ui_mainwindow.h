@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Aug 13 10:01:40 2018
+** Created: Mon Aug 13 11:33:26 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -143,6 +143,8 @@ public:
     gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
     tableView_2 = new QTableView(page_2);
     tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
+    tableView_2->viewport()->setProperty("cursor", QVariant(QCursor(Qt::WhatsThisCursor)));
+    tableView_2->setContextMenuPolicy(Qt::CustomContextMenu);
     tableView_2->setSortingEnabled(true);
 
     gridLayout_3->addWidget(tableView_2, 0, 0, 1, 1);
@@ -185,7 +187,7 @@ public:
 
     retranslateUi(MainWindow);
 
-    stackedWidget->setCurrentIndex(0);
+    stackedWidget->setCurrentIndex(1);
 
 
     QMetaObject::connectSlotsByName(MainWindow);

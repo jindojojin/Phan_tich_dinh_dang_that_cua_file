@@ -30,6 +30,8 @@ private slots:
     void create_submenu(QPoint);
     void on_tableView_customContextMenuRequested(const QPoint &pos);
 
+    void on_tableView_2_customContextMenuRequested(const QPoint &pos);
+
 private:
     QStandardItemModel *model;
     QStandardItemModel *model_2;
@@ -58,6 +60,7 @@ public slots:
     void setProgressRange(int);
     void showFinishDialog();
     void reviewFile();
+    void qickOpenFile();
     void setStatus(QString); //thiet lap trang thai cua giao dien do hoa
 };
 
