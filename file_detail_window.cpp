@@ -16,20 +16,6 @@ File_Detail_Window::~File_Detail_Window()
 
 void File_Detail_Window::setFileInfor(QString file_info){
     this->ui->file_infor_label->setText(file_info);
-
-
-//    file_name_matcher.indexIn(file_information);
-//    file_type_matcher.indexIn(file_information);
-//    file_extension_matcher.indexIn(file_information);
-//    QString fileName = file_name_matcher.cap(2).replace("\\n","");
-//    QString fileType = file_type_matcher.cap(2);
-//    QString fileExtension = file_extension_matcher.cap(2);
-//    emit sendResultToTable_2(fileName+";"+fileType+";"+fileExtension+";"+filePath);
-//    if(fileExtension.length() > 0 &&
-//            QString::compare(fileExtension,filePath.right(fileExtension.length()),Qt::CaseInsensitive)
-//      ){
-//        emit sendResultToTable(fileName+";"+fileType+";"+fileExtension+";"+filePath);
-//    }
 }
 
 void File_Detail_Window::setFilePath(QString file_path){

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Mon Aug 13 11:33:26 2018
+** Created: Sat Aug 25 15:48:17 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -58,7 +58,7 @@ public:
     {
     if (MainWindow->objectName().isEmpty())
         MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-    MainWindow->resize(831, 575);
+    MainWindow->resize(1174, 621);
     actionChonTepTin = new QAction(MainWindow);
     actionChonTepTin->setObjectName(QString::fromUtf8("actionChonTepTin"));
     actionChonThuMuc = new QAction(MainWindow);
@@ -119,7 +119,7 @@ public:
     page->setObjectName(QString::fromUtf8("page"));
     gridLayout_4 = new QGridLayout(page);
     gridLayout_4->setSpacing(6);
-    gridLayout_4->setMargin(11);
+    gridLayout_4->setMargin(1);
     gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
     tableView = new QTableView(page);
     tableView->setObjectName(QString::fromUtf8("tableView"));
@@ -139,7 +139,7 @@ public:
     page_2->setObjectName(QString::fromUtf8("page_2"));
     gridLayout_3 = new QGridLayout(page_2);
     gridLayout_3->setSpacing(6);
-    gridLayout_3->setMargin(11);
+    gridLayout_3->setMargin(1);
     gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
     tableView_2 = new QTableView(page_2);
     tableView_2->setObjectName(QString::fromUtf8("tableView_2"));
@@ -170,7 +170,7 @@ public:
     MainWindow->setCentralWidget(centralWidget);
     menuBar = new QMenuBar(MainWindow);
     menuBar->setObjectName(QString::fromUtf8("menuBar"));
-    menuBar->setGeometry(QRect(0, 0, 831, 25));
+    menuBar->setGeometry(QRect(0, 0, 1174, 25));
     menuTepTin = new QMenu(menuBar);
     menuTepTin->setObjectName(QString::fromUtf8("menuTepTin"));
     MainWindow->setMenuBar(menuBar);

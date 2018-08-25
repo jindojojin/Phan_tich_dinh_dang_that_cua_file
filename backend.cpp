@@ -63,17 +63,17 @@ void Backend::run(QString filePath){
     process.waitForFinished();
     QString file_information(process.readAllStandardOutput());
     QRegExp file_name_matcher("(File Name                       : )([^\\n]*)");
-    QRegExp file_type_matcher("(File Type                       : )([a-zA-Z0-9]*)");
+    QRegExp file_size_matcher("(File Size                       : )([a-zA-Z0-9 \.]*)");
     QRegExp file_extension_matcher("(File Type Extension             : )([a-zA-Z0-9]*)");
     file_name_matcher.indexIn(file_information);
-    file_type_matcher.indexIn(file_information);
+    file_size_matcher.indexIn(file_information);
     file_extension_matcher.indexIn(file_information);
     QString fileName1 = file_name_matcher.cap(2);
     QString fileName = fileName1.left(fileName1.length()-1);//bo ki tu /n
-    QString fileType = file_type_matcher.cap(2);
+    QString fileType = file_size_matcher.cap(2);
     QString fileExtension = file_extension_matcher.cap(2);
 //    QString output;
-//    output = " file path: " + filePath + " real type: "+file_type_matcher.cap(2) + " real extension: "+file_extension_matcher.cap(2);
+//    output = " file path: " + filePath + " real type: "+file_size_matcher.cap(2) + " real extension: "+file_extension_matcher.cap(2);
     emit sendResultToTable_2(fileName+";"+fileType+";"+fileExtension+";"+filePath);
     //Kiem tra duoi file co bi thay doi khong
     if(fileExtension.length() > 0 &&

@@ -66,11 +66,12 @@ void MainWindow::setStatus(QString status){
 void MainWindow::setupTable(){
     this->model = new QStandardItemModel(0,4,this);
     model->setHorizontalHeaderItem(0,new QStandardItem(QString::fromUtf8("Tên tệp tin")));
-    model->setHorizontalHeaderItem(1,new QStandardItem(QString::fromUtf8("Định dạng tệp tin")));
+    model->setHorizontalHeaderItem(1,new QStandardItem(QString::fromUtf8("Kích thước")));
     model->setHorizontalHeaderItem(2,new QStandardItem(QString::fromUtf8("Đuôi mở rộng đúng")));
     model->setHorizontalHeaderItem(3,new QStandardItem(QString::fromUtf8("Đường dẫn")));
     this->ui->tableView->setModel(model);
     this->ui->tableView->setAlternatingRowColors(true);
+    this->ui->tableView->setColumnWidth(0,230);
     this->ui->tableView->setColumnWidth(1,130);
     this->ui->tableView->setColumnWidth(2,130);
     this->ui->tableView->setColumnWidth(3,700);
@@ -82,11 +83,12 @@ void MainWindow::setupTable(){
 
     this->model_2 = new QStandardItemModel(0,4,this);
     model_2->setHorizontalHeaderItem(0,new QStandardItem(QString::fromUtf8("Tên tệp tin")));
-    model_2->setHorizontalHeaderItem(1,new QStandardItem(QString::fromUtf8("Định dạng tệp tin")));
+    model_2->setHorizontalHeaderItem(1,new QStandardItem(QString::fromUtf8("Kích thước")));
     model_2->setHorizontalHeaderItem(2,new QStandardItem(QString::fromUtf8("Đuôi mở rộng đúng")));
     model_2->setHorizontalHeaderItem(3,new QStandardItem(QString::fromUtf8("Đường dẫn")));
     this->ui->tableView_2->setModel(model_2);
     this->ui->tableView_2->setAlternatingRowColors(true);
+    this->ui->tableView_2->setColumnWidth(1,230);
     this->ui->tableView_2->setColumnWidth(1,130);
     this->ui->tableView_2->setColumnWidth(2,130);
     this->ui->tableView_2->setColumnWidth(3,700);
@@ -187,7 +189,7 @@ void MainWindow::on_export_csv_btn_clicked()
     if(file.open(QIODevice::WriteOnly)){
         QTextStream writer(&file);
         writer.setCodec("UTF-8");
-        writer<<QString::fromUtf8("Ten tep tin,Dinh dang tep tin,Duoi mo rong dung,Duong dan,")<<endl << this->csvString;
+        writer<<QString::fromUtf8("Ten tep tin,Kich thuoc,Duoi mo rong dung,Duong dan,")<<endl << this->csvString;
         QMessageBox::information(this,QString::fromUtf8("Hoàn tất"),QString::fromUtf8("Đã xuất thành công kết quả phân tích ra tệp tin csv"));
         file.close();
     }else{QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));}
