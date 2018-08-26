@@ -81,4 +81,13 @@ void Backend::run(QString filePath){
       ){
         emit sendResultToTable(fileName+";"+fileType+";"+fileExtension+";"+filePath);
     }
+    this->addToDict(file_information);
+}
+
+void Backend::addToDict(QString ifo){
+    QFile file("dict.txt");
+    file.open(QFile::Text|QFile::WriteOnly| QFile::Append);
+    QTextStream writer(&file);
+    writer << ifo;
+    file.close();
 }

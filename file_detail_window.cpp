@@ -1,7 +1,9 @@
-#include "file_detail_window.h"
+﻿#include "file_detail_window.h"
 #include "ui_file_detail_window.h"
 #include "QProcess"
-
+#include "mainwindow.h"
+#include "QMap"
+#include "QDebug"
 File_Detail_Window::File_Detail_Window(QWidget *parent) :
     QFrame(parent),
     ui(new Ui::File_Detail_Window)
@@ -24,8 +26,9 @@ void File_Detail_Window::setFilePath(QString file_path){
     process.start("exif.exe -r \""+file_path+"\"");
     process.waitForFinished();
     QString file_information(process.readAllStandardOutput());
-    QRegExp file_name_matcher("(File Name                       : )([^\\n]*)");
-    QRegExp file_type_matcher("(File Type                       : )([a-zA-Z0-9]*)");
-    QRegExp file_extension_matcher("(File Type Extension             : )([a-zA-Z0-9]*)");
+    for (QMap<QString,QString>::iterator it = DICT.begin(); it != DICT.end(); ++it) {
+//        qDebug()<< it.key()<<it.value();
+        file_information.replace(it.value(),it.key());
+    }
     this->setFileInfor(file_information);
 }

@@ -7,17 +7,30 @@
 #include "QUrl"
 #include "file_detail_window.h"
 #include "QMouseEvent"
+QMap<QString, QString> DICT;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     this->resetGUI();
+    this->readDict();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::readDict(){
+    QFile dic("dic.dll");
+    if(!dic.open(QFile::Text|QFile::ReadOnly)) return;
+    QTextStream reader(&dic);
+    reader.setCodec("UTF-8");
+    while(!reader.atEnd()){
+        DICT.insert(reader.readLine(),reader.readLine());
+    }
+    dic.close();
 }
 
 void MainWindow::resetGUI(){
@@ -198,20 +211,8 @@ void MainWindow::on_export_csv_btn_clicked()
 
 void MainWindow::on_tableView_doubleClicked(const QModelIndex &index)
 {
-    int row = index.row();
-    QString realExtension = index.sibling(row,2).data().toString();
-    if(realExtension == ""){
-        QMessageBox::warning(this,QString::fromUtf8("Lỗi"),
-                             QString::fromUtf8("Chưa xác định được định dạng đúng của tệp tin này, hãy mở tập tin bằng cách thông thường!"));
-        return;
-    }
-    QString file = index.sibling(row,3).data().toString();
-    QFile::copy(file,"review_file."+realExtension);
-    if(!QFile::copy(file,"review_file."+realExtension)){
-        QDesktopServices::openUrl(QUrl("review_file."+realExtension));
-    }else{
-        QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));
-    }
+    this->index_triggered = index;
+    this->viewDetail();
 }
 
 void MainWindow::on_actionChonTepTin_triggered()
@@ -225,7 +226,20 @@ void MainWindow::on_actionChonThuMuc_triggered()
 }
 
 void MainWindow::reviewFile(){
-    this->on_tableView_doubleClicked(this->index_triggered);
+    int row = this->index_triggered.row();
+    QString realExtension = this->index_triggered.sibling(row,2).data().toString();
+    if(realExtension == ""){
+        QMessageBox::warning(this,QString::fromUtf8("Lỗi"),
+                             QString::fromUtf8("Chưa xác định được định dạng đúng của tệp tin này, hãy mở tập tin bằng cách thông thường!"));
+        return;
+    }
+    QString file = this->index_triggered.sibling(row,3).data().toString();
+    QFile::copy(file,"review_file."+realExtension);
+    if(!QFile::copy(file,"review_file."+realExtension)){
+        QDesktopServices::openUrl(QUrl("review_file."+realExtension));
+    }else{
+        QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));
+    }
 }
 void MainWindow::qickOpenFile(){
     int row = this->index_triggered.row();

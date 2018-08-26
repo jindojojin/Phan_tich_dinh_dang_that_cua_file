@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'file_detail_window.ui'
 **
-** Created: Sat Aug 25 15:54:06 2018
+** Created: Sat Aug 25 16:59:00 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -33,7 +33,7 @@ public:
     {
     if (File_Detail_Window->objectName().isEmpty())
         File_Detail_Window->setObjectName(QString::fromUtf8("File_Detail_Window"));
-    File_Detail_Window->resize(690, 517);
+    File_Detail_Window->resize(1141, 449);
     File_Detail_Window->setFrameShape(QFrame::StyledPanel);
     File_Detail_Window->setFrameShadow(QFrame::Raised);
     gridLayout = new QGridLayout(File_Detail_Window);

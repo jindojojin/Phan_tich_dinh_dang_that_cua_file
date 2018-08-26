@@ -14,6 +14,7 @@ private:
     QList<QString> files;
     int totalFolders;
     void readInfo();
+    void addToDict(QString); //add line to dict to translation
 signals:
     void sendStringToGui(QString);
     void sendResultToTable(QString);

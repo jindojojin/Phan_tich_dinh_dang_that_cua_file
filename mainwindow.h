@@ -6,6 +6,8 @@
 #include <QStandardItemModel>
 #include <QThread>
 #include "backend.h"
+#include "QMap"
+extern QMap<QString,QString> DICT;
 namespace Ui {
     class MainWindow;
 }
@@ -33,6 +35,7 @@ private slots:
     void on_tableView_2_customContextMenuRequested(const QPoint &pos);
 
 private:
+    void readDict();
     QStandardItemModel *model;
     QStandardItemModel *model_2;
     Ui::MainWindow *ui;
