@@ -250,7 +250,7 @@ void MainWindow::qickOpenFile(){
     QString file = this->index_triggered.sibling(row,3).data().toString();
     QFile path(file);
     if(path.exists()){
-        if(!QDesktopServices::openUrl(QUrl(file))){
+        if(!QDesktopServices::openUrl(QUrl::fromLocalFile(file))){
             QMessageBox::warning(this,QString::fromUtf8("Lỗi"), QString::fromUtf8("Không thể mở tệp tin bằng cách thông thường"));
         }
     }else{

@@ -45793,3 +45793,369 @@ File Access Date/Time           : 2018:08:27 08:42:38+07:00
 File Creation Date/Time         : 2018:08:01 23:54:25+07:00
 File Permissions                : rw-rw-rw-
 Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : .angular-cli.json.zip
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 1239 bytes
+File Modification Date/Time     : 2018:04:16 14:33:10+07:00
+File Access Date/Time           : 2018:08:27 08:51:10+07:00
+File Creation Date/Time         : 2018:07:30 10:57:41+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : JSON
+File Type Extension             : json
+MIME Type                       : application/json
+Schema                          : ./node_modules/@angular/cli/lib/config/schema.json
+Apps Assets                     : assets, favicon.ico
+Apps Environment Source         : environments/environment.ts
+Apps Environments Dev           : environments/environment.ts
+Apps Environments Prod          : environments/environment.prod.ts
+Apps Index                      : index.html
+Apps Main                       : main.ts
+Apps Out Dir                    : dist
+Apps Polyfills                  : polyfills.ts
+Apps Prefix                     : app
+Apps Root                       : src
+Apps Styles                     : styles.css
+Apps Test                       : test.ts
+Apps Test Tsconfig              : tsconfig.spec.json
+Apps Tsconfig                   : tsconfig.app.json
+Defaults Style Ext              : css
+E2e Protractor Config           : ./protractor.conf.js
+Lint Exclude                    : **/node_modules/**, **/node_modules/**, **/node_modules/**
+Lint Project                    : src/tsconfig.app.json, src/tsconfig.spec.json, e2e/tsconfig.e2e.json
+Project Name                    : linh
+Test Karma Config               : ./karma.conf.js
+ExifTool Version Number         : 11.06
+File Name                       : 194589-OYCDMB-924.exe
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 2.1 MB
+File Modification Date/Time     : 2017:10:24 21:18:10+07:00
+File Access Date/Time           : 2018:08:27 08:51:10+07:00
+File Creation Date/Time         : 2018:07:30 10:57:41+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+JFIF Version                    : 1.02
+Resolution Unit                 : None
+X Resolution                    : 100
+Y Resolution                    : 100
+Quality                         : 100%
+Profile CMM Type                : Linotronic
+Profile Version                 : 2.1.0
+Profile Class                   : Display Device Profile
+Color Space Data                : RGB
+Profile Connection Space        : XYZ
+Profile Date Time               : 1998:02:09 06:49:00
+Profile File Signature          : acsp
+Primary Platform                : Microsoft Corporation
+CMM Flags                       : Not Embedded, Independent
+Device Manufacturer             : Hewlett-Packard
+Device Model                    : sRGB
+Device Attributes               : Reflective, Glossy, Positive, Color
+Rendering Intent                : Perceptual
+Connection Space Illuminant     : 0.9642 1 0.82491
+Profile Creator                 : Hewlett-Packard
+Profile ID                      : 0
+Profile Copyright               : Copyright (c) 1998 Hewlett-Packard Company
+Profile Description             : sRGB IEC61966-2.1
+Media White Point               : 0.95045 1 1.08905
+Media Black Point               : 0 0 0
+Red Matrix Column               : 0.43607 0.22249 0.01392
+Green Matrix Column             : 0.38515 0.71687 0.09708
+Blue Matrix Column              : 0.14307 0.06061 0.7141
+Device Mfg Desc                 : IEC http://www.iec.ch
+Device Model Desc               : IEC 61966-2.1 Default RGB colour space - sRGB
+Viewing Cond Desc               : Reference Viewing Condition in IEC61966-2.1
+Viewing Cond Illuminant         : 19.6445 20.3718 16.8089
+Viewing Cond Surround           : 3.92889 4.07439 3.36179
+Viewing Cond Illuminant Type    : D50
+Luminance                       : 76.03647 80 87.12462
+Measurement Observer            : CIE 1931
+Measurement Backing             : 0 0 0
+Measurement Geometry            : Unknown
+Measurement Flare               : 0.999%
+Measurement Illuminant          : D65
+Technology                      : Cathode Ray Tube Display
+Red Tone Reproduction Curve     : (Binary data 2060 bytes, use -b option to extract)
+Green Tone Reproduction Curve   : (Binary data 2060 bytes, use -b option to extract)
+Blue Tone Reproduction Curve    : (Binary data 2060 bytes, use -b option to extract)
+DCT Encode Version              : 100
+APP14 Flags 0                   : [14], Encoded with Blend=1 downsampling
+APP14 Flags 1                   : (none)
+Color Transform                 : YCbCr
+Image Width                     : 3000
+Image Height                    : 2000
+Encoding Process                : Progressive DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:4:4 (1 1)
+Image Size                      : 3000x2000
+Megapixels                      : 6.0
+ExifTool Version Number         : 11.06
+File Name                       : anh nen.doc
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 116 MB
+File Modification Date/Time     : 2017:12:04 00:42:58+07:00
+File Access Date/Time           : 2018:08:27 08:51:11+07:00
+File Creation Date/Time         : 2018:07:30 10:57:41+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : PSD
+File Type Extension             : psd
+MIME Type                       : application/vnd.adobe.photoshop
+Num Channels                    : 2
+Image Height                    : 8000
+Image Width                     : 12000
+Bit Depth                       : 8
+Current IPTC Digest             : c87b6d94b76a95f8c10da685f08f9be8
+Coded Character Set             : UTF8
+Application Record Version      : 0
+Special Instructions            : FBMD0100061f0300008011000067300000ca400000616b0000fa6d0000f3b10000
+Original Transmission Reference : JQp0msW6KIhZvhd8YPp6
+IPTC Digest                     : c87b6d94b76a95f8c10da685f08f9be8
+XMP Toolkit                     : Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39
+Legacy IPTC Digest              : 3AE4B98BB990C7E5007DFD91A52A6EF9
+Instructions                    : FBMD0100061f0300008011000067300000ca400000616b0000fa6d0000f3b10000
+Transmission Reference          : JQp0msW6KIhZvhd8YPp6
+Color Mode                      : Grayscale
+ICC Profile Name                : c2
+Document ID                     : adobe:docid:photoshop:fe695efa-6fa1-f14e-b933-679661dccc97
+Instance ID                     : xmp.iid:f933dfd5-be23-5c42-9d5b-7cd6471f53d3
+Original Document ID            : 51E22FDD9CAD73BF21ED3402D25EEDB3
+History Action                  : saved, converted, derived, saved
+History Instance ID             : xmp.iid:f4d2a37f-f7fe-4d4c-96d7-42f372913ae1, xmp.iid:f933dfd5-be23-5c42-9d5b-7cd6471f53d3
+History When                    : 2017:12:04 00:42:43+07:00, 2017:12:04 00:42:43+07:00
+History Software Agent          : Adobe Photoshop CC (Windows), Adobe Photoshop CC (Windows)
+History Changed                 : /, /
+History Parameters              : from image/jpeg to application/vnd.adobe.photoshop, converted from image/jpeg to application/vnd.adobe.photoshop
+Derived From Instance ID        : xmp.iid:f4d2a37f-f7fe-4d4c-96d7-42f372913ae1
+Derived From Document ID        : 51E22FDD9CAD73BF21ED3402D25EEDB3
+Derived From Original Document ID: 51E22FDD9CAD73BF21ED3402D25EEDB3
+Format                          : application/vnd.adobe.photoshop
+Create Date                     : 2017:12:02 23:15:15+07:00
+Metadata Date                   : 2017:12:04 00:42:43+07:00
+X Resolution                    : 508
+Displayed Units X               : cm
+Y Resolution                    : 508
+Displayed Units Y               : cm
+Print Style                     : Centered
+Print Position                  : 0 0
+Print Scale                     : 1
+Alpha Channels Names            : Transparency
+Global Angle                    : 30
+Global Altitude                 : 30
+URL List                        : 
+Slices Group Name               : 
+Num Slices                      : 1
+Pixel Aspect Ratio              : 1
+Photoshop Thumbnail             : (Binary data 6992 bytes, use -b option to extract)
+Has Real Merged Data            : Yes
+Writer Name                     : Adobe Photoshop
+Reader Name                     : Adobe Photoshop CC
+Exif Byte Order                 : Big-endian (Motorola, MM)
+Bits Per Sample                 : 8 8 8 8
+Photometric Interpretation      : BlackIsZero
+Orientation                     : Horizontal (normal)
+Samples Per Pixel               : 4
+Resolution Unit                 : cm
+Software                        : Adobe Photoshop CC (Windows)
+Modify Date                     : 2017:12:04 00:42:43
+Exif Version                    : 0221
+Color Space                     : Uncalibrated
+Exif Image Width                : 12000
+Exif Image Height               : 8000
+Thumbnail Offset                : 382
+Thumbnail Length                : 0
+Layer Count                     : 1
+Layer Rectangles                : 0 4294965049 8000 14248
+Layer Blend Modes               : Normal
+Layer Opacities                 : 100%
+Layer Names                     : Layer 0
+Layer Unicode Names             : Layer 0
+Layer Modify Dates              : 2017:12:04 00:42:57+07:00
+Compression                     : RLE
+Image Size                      : 12000x8000
+Megapixels                      : 96.0
+ExifTool Version Number         : 11.06
+File Name                       : backup.cel
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 402 MB
+File Modification Date/Time     : 2018:01:19 17:57:29+07:00
+File Access Date/Time           : 2018:08:27 08:51:11+07:00
+File Creation Date/Time         : 2018:07:30 10:57:41+07:00
+File Permissions                : rw-rw-rw-
+Error                           : Unknown file type
+ExifTool Version Number         : 11.06
+File Name                       : License premium.png
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 1116 bytes
+File Modification Date/Time     : 2017:10:26 16:01:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:12+07:00
+File Creation Date/Time         : 2018:07:30 10:57:42+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : Standee-01.php
+Directory                       : C:/Users/linhtq/Desktop/testfiletype
+File Size                       : 20 MB
+File Modification Date/Time     : 2017:12:04 18:13:05+07:00
+File Access Date/Time           : 2018:08:27 08:51:12+07:00
+File Creation Date/Time         : 2018:07:30 10:57:42+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : PDF
+File Type Extension             : pdf
+MIME Type                       : application/pdf
+PDF Version                     : 1.4
+Linearized                      : Yes
+XMP Toolkit                     : Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39
+Format                          : application/pdf
+Title                           : Standee
+Creator Tool                    : Adobe Illustrator CC 22.0 (Windows)
+Create Date                     : 2017:12:04 18:11:06+07:00
+Modify Date                     : 2017:12:04 18:13:04+07:00
+Metadata Date                   : 2017:12:04 18:13:04+07:00
+Thumbnail Format                : JPEG
+Thumbnail Height                : 512
+Thumbnail Width                 : 228
+Thumbnail Image                 : (Binary data 36079 bytes, use -b option to extract)
+Original Document ID            : uuid:9E3E5C9A8C81DB118734DB58FDDE4BA7
+Document ID                     : adobe:docid:photoshop:fdc19ae3-ad2f-ef42-841a-084165b79e06
+Instance ID                     : uuid:e307eff3-dc6c-4d75-acd1-622b15b3cc18
+Rendition Class                 : proof:pdf
+Derived From Instance ID        : xmp.iid:cc45430c-a247-b44c-a151-b3240b2add8d
+Derived From Document ID        : adobe:docid:photoshop:f24af72b-d8e3-11e7-b0a2-bc746cc72095
+Derived From Original Document ID: uuid:9E3E5C9A8C81DB118734DB58FDDE4BA7
+Derived From Rendition Class    : proof:pdf
+History Action                  : saved, saved, converted, saved, converted, saved, saved, converted, derived, saved
+History Instance ID             : xmp.iid:f2788e8b-51de-ed48-8b5f-61f217a47fec, xmp.iid:edfea263-6b42-bd4b-b0a2-821d86d5292f, xmp.iid:e3a6e8e4-0ab7-3740-ad96-445e194312ca, xmp.iid:e1ebfdc5-8a68-ed49-8cf3-dae6db943d0d, xmp.iid:cc45430c-a247-b44c-a151-b3240b2add8d, xmp.iid:a17a780a-c247-3e40-bfa6-d75f56e04f81
+History When                    : 2017:12:04 16:02:18+07:00, 2017:12:04 18:11:06+07:00, 2017:12:04 18:11:59+07:00, 2017:12:04 18:11:59+07:00, 2017:12:04 18:12:58+07:00, 2017:12:04 18:12:58+07:00
+History Software Agent          : Adobe Illustrator CC 22.0 (Windows), Adobe Illustrator CC 22.0 (Windows), Adobe Illustrator CC 22.0 (Windows), Adobe Illustrator CC 22.0 (Windows), Adobe Photoshop CC (Windows), Adobe Photoshop CC (Windows)
+History Changed                 : /, /, /, /, /, /
+History Parameters              : from application/x-photoshop to application/vnd.adobe.photoshop, from application/x-photoshop to application/vnd.adobe.photoshop, from application/vnd.adobe.photoshop to application/pdf, converted from application/vnd.adobe.photoshop to application/pdf
+Startup Profile                 : Basic RGB
+Producer                        : Adobe Photoshop for Windows -- Image Conversion Plug-in
+Color Mode                      : CMYK
+ICC Profile Name                : U.S. Web Coated (SWOP) v2
+Page Count                      : 1
+Creator                         : Adobe Illustrator CC 22.0 (Windows)
+ExifTool Version Number         : 11.06
+File Name                       : backend.o
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 8.7 kB
+File Modification Date/Time     : 2018:08:01 23:50:23+07:00
+File Access Date/Time           : 2018:08:27 08:51:13+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : FileTypeIndentify.dll
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 96 kB
+File Modification Date/Time     : 2018:08:01 23:50:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:13+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : Win32 DLL
+File Type Extension             : dll
+MIME Type                       : application/octet-stream
+Machine Type                    : Intel 386 or later, and compatibles
+Time Stamp                      : 2018:08:01 23:50:24+07:00
+PE Type                         : PE32
+Linker Version                  : 2.56
+Code Size                       : 48128
+Initialized Data Size           : 96768
+Uninitialized Data Size         : 512
+Entry Point                     : 0x1060
+OS Version                      : 4.0
+Image Version                   : 1.0
+Subsystem Version               : 4.0
+Subsystem                       : Windows command line
+ExifTool Version Number         : 11.06
+File Name                       : FileTypeIndentify.exe
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 90 kB
+File Modification Date/Time     : 2018:08:01 23:53:39+07:00
+File Access Date/Time           : 2018:08:27 08:51:14+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : Win32 EXE
+File Type Extension             : exe
+MIME Type                       : application/octet-stream
+Machine Type                    : Intel 386 or later, and compatibles
+Time Stamp                      : 2018:08:01 23:53:39+07:00
+PE Type                         : PE32
+Linker Version                  : 2.56
+Code Size                       : 49152
+Initialized Data Size           : 91648
+Uninitialized Data Size         : 512
+Entry Point                     : 0x12a0
+OS Version                      : 4.0
+Image Version                   : 1.0
+Subsystem Version               : 4.0
+Subsystem                       : Windows GUI
+ExifTool Version Number         : 11.06
+File Name                       : libFileTypeIndentify.a
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 38 kB
+File Modification Date/Time     : 2018:08:01 23:50:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:14+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+File Type                       : Static library
+File Type Extension             : a
+MIME Type                       : application/octet-stream
+Create Date                     : 2018:08:01 23:50:24+07:00
+ExifTool Version Number         : 11.06
+File Name                       : main.o
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 2.2 kB
+File Modification Date/Time     : 2018:08:01 23:50:22+07:00
+File Access Date/Time           : 2018:08:27 08:51:14+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : mainwindow.o
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 28 kB
+File Modification Date/Time     : 2018:08:01 23:53:39+07:00
+File Access Date/Time           : 2018:08:27 08:51:15+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : moc_backend.cpp
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 2.8 kB
+File Modification Date/Time     : 2018:08:01 23:50:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:15+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : Unknown file type
+ExifTool Version Number         : 11.06
+File Name                       : moc_backend.o
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 5.0 kB
+File Modification Date/Time     : 2018:08:01 23:50:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:16+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
+ExifTool Version Number         : 11.06
+File Name                       : moc_mainwindow.cpp
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 2.9 kB
+File Modification Date/Time     : 2018:08:01 23:50:23+07:00
+File Access Date/Time           : 2018:08:27 08:51:16+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : Unknown file type
+ExifTool Version Number         : 11.06
+File Name                       : moc_mainwindow.o
+Directory                       : C:/Users/linhtq/Desktop/testfiletype/release
+File Size                       : 9.6 kB
+File Modification Date/Time     : 2018:08:01 23:50:24+07:00
+File Access Date/Time           : 2018:08:27 08:51:17+07:00
+File Creation Date/Time         : 2018:08:01 23:54:25+07:00
+File Permissions                : rw-rw-rw-
+Error                           : File format error
