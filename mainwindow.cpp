@@ -233,18 +233,29 @@ void MainWindow::reviewFile(){
                              QString::fromUtf8("Chưa xác định được định dạng đúng của tệp tin này, hãy mở tập tin bằng cách thông thường!"));
         return;
     }
-    QString file = this->index_triggered.sibling(row,3).data().toString();
-    QFile::copy(file,"review_file."+realExtension);
-    if(!QFile::copy(file,"review_file."+realExtension)){
-        QDesktopServices::openUrl(QUrl("review_file."+realExtension));
+    QString file = this->index_triggered.sibling(row,3).data().toString();// file path
+    QString fileName = this->index_triggered.sibling(row,0).data().toString();
+    QString fileToCoppy = QFileDialog::getSaveFileName(this,QString::fromUtf8("Tệp tin sẽ được sao chép vào ...")
+                                                       ,fileName+"review."+realExtension,"."+realExtension);
+    qDebug()<< fileToCoppy;
+//    QMessageBox::information(this,"",QString::fromUtf8("Đang sao chép tệp tin"),NULL,NULL);
+    if(QFile::copy(file,fileToCoppy)){
+        QDesktopServices::openUrl(QUrl(fileToCoppy));
     }else{
-        QMessageBox::warning(this,QString::fromUtf8("Hoàn tất"), QString::fromUtf8("Đã có lỗi xảy ra, vui lòng thử lại sau!"));
+        QMessageBox::warning(this,QString::fromUtf8("Lỗi"), QString::fromUtf8("Đã có lỗi xảy ra trong quá trình sao chép tệp tin, vui lòng thử lại sau!"));
     }
 }
 void MainWindow::qickOpenFile(){
     int row = this->index_triggered.row();
     QString file = this->index_triggered.sibling(row,3).data().toString();
-    QDesktopServices::openUrl(QUrl(file));
+    QFile path(file);
+    if(path.exists()){
+        if(!QDesktopServices::openUrl(QUrl(file))){
+            QMessageBox::warning(this,QString::fromUtf8("Lỗi"), QString::fromUtf8("Không thể mở tệp tin bằng cách thông thường"));
+        }
+    }else{
+        QMessageBox::warning(this,QString::fromUtf8("Lỗi"), QString::fromUtf8("Tệp tin không còn tồn tại"));
+    }
 }
 void MainWindow::viewDetail(){
     int row = this->index_triggered.row();
