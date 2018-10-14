@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'mainwindow.ui'
 **
-** Created: Sat Aug 25 15:48:17 2018
+** Created: Sun Oct 14 14:27:52 2018
 **      by: Qt User Interface Compiler version 4.4.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -195,7 +195,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-    MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
+    MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Ph\303\242n t\303\255ch \304\221\341\273\213nh d\341\272\241ng t\341\273\207p tin", 0, QApplication::UnicodeUTF8));
     actionChonTepTin->setText(QApplication::translate("MainWindow", "Ch\341\273\215n t\341\273\207p tin ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     actionChonThuMuc->setText(QApplication::translate("MainWindow", "Ch\341\273\215n th\306\260 m\341\273\245c ph\303\242n t\303\255ch", 0, QApplication::UnicodeUTF8));
     label->setText(QString());
